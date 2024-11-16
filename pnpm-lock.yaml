@@ -15,6 +15,22 @@ importers:
         specifier: 5.6.3
         version: 5.6.3
 
+  packages/a:
+    devDependencies:
+      typescript:
+        specifier: 5.6.3
+        version: 5.6.3
+
+  packages/b:
+    dependencies:
+      '@rafi/mono-repo-test-a':
+        specifier: workspace:*
+        version: link:../a
+    devDependencies:
+      typescript:
+        specifier: 5.6.3
+        version: 5.6.3
+
 packages:
 
   '@babel/runtime@7.26.0':
